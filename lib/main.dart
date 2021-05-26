@@ -49,7 +49,24 @@ class _HomePageState extends State<HomePage> {
                      },
                      child:Text("Download",style: TextStyle(color: Colors.orange),),
                  ),
-                 Text("${value.getProgress}%")
+                 SizedBox(height: 10,),
+                 Text(value.getProgress.toStringAsFixed(2)+"%"),
+                 SizedBox(height: 10,),
+                 LinearProgressIndicator(
+                   value:value.getProgress/100,
+                   minHeight: 20,
+                   valueColor: AlwaysStoppedAnimation<Color?>(
+                     Colors.red,
+                   ),
+                 ),
+                 SizedBox(height: 20,),
+                 CircularProgressIndicator(
+                   value: value.getProgress/100,
+                   backgroundColor: Colors.black,
+                   valueColor: AlwaysStoppedAnimation<Color?>(
+                     Colors.red,
+                   ),
+                 )
                ],
              )
            ),
