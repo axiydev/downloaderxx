@@ -66,7 +66,8 @@ class _HomePageState extends State<HomePage> {
                    valueColor: AlwaysStoppedAnimation<Color?>(
                      Colors.red,
                    ),
-                 )
+                 ),
+
                ],
              )
            ),
